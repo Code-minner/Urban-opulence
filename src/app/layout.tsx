@@ -1,8 +1,46 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata, Viewport } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+import Header from "@/components/orgnisms/Header";
+import localFont from "next/font/local";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import Footer from "@/components/orgnisms/Footer";
+import { AOSInit } from "@/lib/AOSInit";
+
+const integralCF = localFont({
+  src: "../../public/font/IntegralCF-Bold.ttf",
+  variable: "--font-integral",
+  display: "swap",
+});
+
+const Satoshi = localFont({
+  src: [
+    {
+      path: "../../public/font/Satoshi-Black.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/Satoshi-Bold.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/Satoshi-Medium.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/font/Satoshi-Regular.ttf",
+      weight: "300",
+      style: "normal",
+    },
+  ],
+  variable: "--font-satoshi",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +54,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${Satoshi.variable}  ${integralCF.variable}`}>
+        <AOSInit />
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
