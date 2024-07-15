@@ -16,11 +16,12 @@ const PortfolioGallery = () => {
           layout="columns"
           photos={photos}
         />
-        ;
       </section>
-      <Button className=" text-base py-3 font-satoshi mt-8 px-10">
-        Download Brochure
-      </Button>
+      <a href="assets/brochure.pdf" download>
+        <Button className=" text-base py-3 font-satoshi mt-8 px-10">
+          Download Brochure
+        </Button>
+      </a>
     </div>
   );
 };

@@ -14,9 +14,9 @@ const ContactForm = () => {
   const [subject, setSubject] = useState("");
   const contact = [
     {
-      title: "Call us",
+      title: "Call us or Whatsapp",
       icon: <BiPhone />,
-      value: "08108744697",
+      value: "08139335342, 09025363821",
     },
     {
       title: "Email us",

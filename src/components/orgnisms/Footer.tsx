@@ -21,7 +21,7 @@ const Footer = () => {
     },
     {
       type: "phone",
-      value: "08108744697",
+      value: "08139335342, 09025363821",
     },
     {
       type: "email",
@@ -55,8 +55,9 @@ const Footer = () => {
         <div className="w-full lg:w-[40%]">
           <Image className="w-44" alt="logowhite" src={logowhite} />
           <p className=" mt-4 pr-10 lg:pr-0 text-sm">
-            We'd love to hear from you! Either you're ready to Kickstart your
-            project or you just have some questions, we're here to help
+            We&apos;d love to hear from you! Either you&apos;re ready to
+            Kickstart your project or you just have some questions, we&apos;re
+            here to help
           </p>
           <p className="text-[#645D5D] mt-10">
             © 2024 URBAN OPLENCE INTERIORS. All rights reserved.

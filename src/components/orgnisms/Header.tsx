@@ -16,9 +16,11 @@ function Header() {
         <Navbar />
 
         <div className="pl-3 hidden lg:flex flex-center">
-          <Button className="  text-base font-satoshi  px-5">
-            Explore Store
-          </Button>
+          <a href="/contact">
+            <Button className="  text-base font-satoshi  px-5">
+              Contact Us
+            </Button>
+          </a>
         </div>
       </nav>
     </section>

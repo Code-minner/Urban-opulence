@@ -70,8 +70,11 @@ const PortolioSection = () => {
             <BsArrowUpRight size={24} color="white" />
           </button>
           <div className="swiper-wrapper pl-2 lg:pl-0 mt-8">
-            {[1, 2, 3, 4, 4, 5, 6, 6].map((item) => (
-              <div className="swiper-slide overflow-hidden h-[400px]  w-[300px] bg-gray-300">
+            {[1, 2, 3, 4, 4, 5, 6, 6].map((_, index) => (
+              <div
+                key={index}
+                className="swiper-slide overflow-hidden h-[400px]  w-[300px] bg-gray-300"
+              >
                 <img
                   className="w-full h-full object-cover"
                   src="https://img.freepik.com/free-photo/modern-styled-entryway_23-2150695795.jpg?t=st=1720898423~exp=1720902023~hmac=bf99c8f533d27c96ea62ed01a411d690c4d109a738d01c1c591c0dbffe1184f4&w=360"
