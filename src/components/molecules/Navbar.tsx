@@ -24,6 +24,10 @@ const menu = [
     route: "/contact",
   },
   {
+    title: "Become a Partner",
+    route: "/become-a-partner",
+  },
+  {
     title: "AI",
     route: "/ai",
   },
@@ -139,9 +143,11 @@ const Navbar = () => {
                 </li>
               </motion.a>
             ))}
-            <Button className="  text-base font-satoshi  px-5">
-              Explore Store
-            </Button>
+            <a href="/contact">
+              <Button className="  text-base font-satoshi  px-5">
+                Explore Space
+              </Button>
+            </a>
           </ul>
         </motion.div>
       </div>

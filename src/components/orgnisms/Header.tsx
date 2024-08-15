@@ -18,7 +18,7 @@ function Header() {
         <div className="pl-3 hidden lg:flex flex-center">
           <a href="/contact">
             <Button className="  text-base font-satoshi  px-5">
-              Contact Us
+              Explore Space
             </Button>
           </a>
         </div>

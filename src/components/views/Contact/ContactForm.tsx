@@ -4,7 +4,6 @@ import TextInput from "@/components/atom/TextInput";
 import React, { useState } from "react";
 import { BiPhone } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
-import { PiMapPinFill } from "react-icons/pi";
 
 const ContactForm = () => {
   const [firstname, setFirstname] = useState("");
@@ -23,11 +22,11 @@ const ContactForm = () => {
       icon: <MdEmail />,
       value: "info@opulenceinteriors.com.ng",
     },
-    {
-      title: "Visit us",
-      icon: <PiMapPinFill />,
-      value: "19, Iroko Estate Lagos, Nigeria",
-    },
+    // {
+    //   title: "Visit us",
+    //   icon: <PiMapPinFill />,
+    //   value: "19, Iroko Estate Lagos, Nigeria",
+    // },
   ];
 
   return (

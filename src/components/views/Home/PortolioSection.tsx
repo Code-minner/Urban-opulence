@@ -1,5 +1,5 @@
 "use client";
-import React, { Ref, useEffect, useRef } from "react";
+import React, { Ref, useEffect, useRef, useState } from "react";
 import gridBg from "../../../../public/assets/gridbg.png";
 import Image from "next/image";
 import Swiper from "swiper";
@@ -7,9 +7,26 @@ import { Swiper as SwiperInstance } from "swiper/types";
 import { BsArrowUpLeft, BsArrowUpRight } from "react-icons/bs";
 import Button from "@/components/atom/Button";
 import { Autoplay } from "swiper/modules";
+import { FileInfo, listOfFiles } from "@uploadcare/rest-client";
+import uploadcareSimpleAuthSchema from "@/utils/galleryCDN";
 
 const PortolioSection = () => {
   const swiperRef = useRef<SwiperInstance | null>(null);
+  const [images, setImages] = useState<FileInfo[]>([]);
+
+  const fetchPortfolio = async () => {
+    try {
+      const result = await listOfFiles(
+        {},
+        { authSchema: uploadcareSimpleAuthSchema }
+      );
+      if (result) {
+        setImages(result.results);
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   useEffect(() => {
     // Initialize Swiper
@@ -23,6 +40,8 @@ const PortolioSection = () => {
         delay: 3000,
       },
     });
+
+    fetchPortfolio();
 
     swiperRef.current = swiperInstance;
 
@@ -70,14 +89,16 @@ const PortolioSection = () => {
             <BsArrowUpRight size={24} color="white" />
           </button>
           <div className="swiper-wrapper pl-2 lg:pl-0 mt-8">
-            {[1, 2, 3, 4, 4, 5, 6, 6].map((_, index) => (
+            {images?.map((image, index) => (
               <div
                 key={index}
-                className="swiper-slide overflow-hidden h-[400px]  w-[300px] bg-gray-300"
+                className="swiper-slide overflow-hidden h-[400px]  w-[300px] "
               >
-                <img
+                <Image
+                  width={300}
+                  height={300}
                   className="w-full h-full object-cover"
-                  src="https://img.freepik.com/free-photo/modern-styled-entryway_23-2150695795.jpg?t=st=1720898423~exp=1720902023~hmac=bf99c8f533d27c96ea62ed01a411d690c4d109a738d01c1c591c0dbffe1184f4&w=360"
+                  src={image.originalFileUrl as string}
                   alt="image"
                 />
               </div>

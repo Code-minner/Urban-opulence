@@ -2,6 +2,7 @@ import CtaSection_1 from "@/components/views/Home/CtaSection_1";
 import CtaSection_2 from "@/components/views/Home/CtaSection_2";
 import HeroSection from "@/components/views/Home/HeroSection";
 import HowWeWork from "@/components/views/Home/HowWeWork";
+import PartnerWithUs from "@/components/views/Home/PartnerWithUs";
 import PortolioSection from "@/components/views/Home/PortolioSection";
 import ProjectsSection from "@/components/views/Home/ProjectsSection";
 import TestimonialSection from "@/components/views/Home/TestimonialSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <CtaSection_1 />
       <HowWeWork />
       <PortolioSection />
+      <PartnerWithUs />
       <TestimonialSection />
       <CtaSection_2 />
     </main>

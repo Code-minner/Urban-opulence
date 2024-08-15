@@ -26,8 +26,8 @@ const ContactUsHero = () => {
             Contact Us
           </h1>
           <p className=" font-satoshi max-w-2xl  text-lg lg:text-2xl mt-8 pl-2">
-            We transform ordinary rooms into extraordinary environments that
-            reflect your unique styles and needs.
+            Speak with Urban Opulence Interiors to discuss your design needs and
+            get started on your dream project.
           </p>
         </div>
       </section>
