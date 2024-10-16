@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import ctaBG from "../../../../public/assets/ctaBG.png";
-import home from "../../../../public/assets/home.png";
 import Button from "@/components/atom/Button";
 
 const CtaSection_1 = () => {
