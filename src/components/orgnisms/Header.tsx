@@ -6,7 +6,7 @@ import Button from "../atom/Button";
 
 function Header() {
   return (
-    <section className=" w-screen py-1 lg:py-3 px-3 lg:px-0 z-[1000] backdrop-blur-sm  fixed top-0  bg-[rgba(255,255,255,0.5)]  column-center">
+    <section className=" w-screen py-1 lg:py-3 px-3 lg:px-0 z-[1000] backdrop-blur-sm fixed top-0  bg-[rgba(255,255,255,0.5)]  column-center">
       <nav className=" flex-between  w-full max-w-6xl h-12  ">
         {/* Logo */}
         <a href="/">

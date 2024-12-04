@@ -16,6 +16,10 @@ const menu = [
     route: "/about-us",
   },
   {
+    title: "Blog",
+    route: "/blog",
+  },
+  {
     title: "Portfolio Gallery",
     route: "/portfolio",
   },
